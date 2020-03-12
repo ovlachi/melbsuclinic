@@ -4,3 +4,10 @@ html {
     font-family: 'Cantarell', sans-serif;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+/* “wrapper” helps to create consistent, centred content.*/
+.wrapper {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
