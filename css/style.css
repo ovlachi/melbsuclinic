@@ -1,13 +1,181 @@
+/*COLORS*/
 
-/*Font Families- Google Font*/
-html {
-    font-family: 'Cantarell', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* “wrapper” helps to create consistent, centred content.*/
-.wrapper {
+
+/*Font Families- Google Font*/
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    background-color: #bbb;
+} 
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: #fff;
+}
+
+
+
+/* SVG logo style*/
+#logo {
+    float: left;
+    height: 120px;
+    width: auto;
+    display: block;
+    padding: 25px 40px;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+/* HEADER style*/
+.header ul a {
+    color: #2f2c1e;
+    display: block;
+    padding: 20px;
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+.header ul a:hover {
+    color: rgba(47, 44, 30, 0.6) ;
+}
+
+/*MENU SECTION*/
+
+/*HIDDEN MENU ITEMS ON MOBILE*/
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu__btn {
+    display: none;
+}
+
+.header .menu__btn:checked ~ .menu {
+    max-height: 320px;
+}
+
+.header .menu__btn:checked ~ .menu__icon .nav__icon {
+    background-color: transparent;
+}
+
+.header .menu__btn:checked ~ .menu__icon .nav__icon:before {
+    transform: rotate(-45deg);
+    top:0;
+}
+
+.header .menu__btn:checked ~ .menu__icon .nav__icon:after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+
+.header .menu__icon {
+    padding: 40px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+.header .menu__icon .nav__icon {
+    background-color: #2f2c1e;
+    display: block;
+    height: 1.9px;
+    width: 20px;
+    position: relative;
+    transition: background-color .2s ease-out;
+}
+
+.header .menu__icon .nav__icon:before {
+    background-color: #2f2c1e;
+    content: "";
+    display: block;
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: 5px;
+}
+
+.nav__icon:after {
+    background-color: #2f2c1e;
+    display: block;
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    top: -5px;
+}
+
+/*DESKTOP VERSION OF THE MENU*/ 
+@media (min-width:79.25em) { /*1268:16 =79.25em*/
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 35px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-top: 25px;
+    }
+
+    .header .menu__icon {
+        display: none;
+    }
+
+    .header ul .nav__button {
+        background-color:  #2f2c1e;
+        text-decoration: none;
+        margin-top: 5px;
+        margin-right: 35px;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+    }
+
+    .header ul .nav__button--a {
+        color: white;
+        margin-left: 0px;
+        padding: 15px 30px 10px 30px;
+
+    }
+
+    .header ul .nav__button--a:hover  {
+        color: #e1dfd0;
+    }
+}
+/*MENU SECTION ENDS*/
+
+
+/* Wrapper helps to create consistent, centred content.*/
+/* .wrapper {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
-}
+} */
