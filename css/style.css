@@ -1,6 +1,11 @@
-/*COLORS*/
+/*COLORS
+light:  #e1dfd0;
+medium: #8d8559;
+dark: #2f2c1e;
 
 
+
+*/
 
 
 * {
@@ -172,8 +177,22 @@ body {
 }
 /*MENU SECTION ENDS*/
 
+/*HERO section*/
+.hero {
+    height: 90vh;
+    background-image: url(../img/hero-image-large.jpg);
+    background-size: cover;
+    background-position: center;
+    outline: solid 1px yellowgreen;
+}
 
-/* Wrapper helps to create consistent, centred content.*/
+.heading__primary {
+    color: #2f2c1e;
+    text-transform: uppercase;
+}
+
+
+/* Wrapper helps to create consistent, centered content.*/
 /* .wrapper {
     max-width: 50%;
     margin-left: auto;
