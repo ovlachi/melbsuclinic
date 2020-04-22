@@ -21,15 +21,7 @@ body {
   z-index: 100;
   background: #fff;
   backface-visibility: hidden;
-}
-
-/* SVG logo style*/
-#header__logo {
-  float: left;
-  height: 120px;
-  width: auto;
-  display: block;
-  padding: 25px 40px;
+  /* HEADER style*/
 }
 
 .header ul {
@@ -39,7 +31,6 @@ body {
   overflow: hidden;
 }
 
-/* HEADER style*/
 .header ul a {
   color: #2f2c1e;
   display: block;
@@ -53,12 +44,26 @@ body {
   color: rgba(47, 44, 30, 0.6);
 }
 
+.header ul li:last-child {
+  margin-top: 8px;
+}
+
+/* SVG logo style*/
+#header__logo {
+  float: left;
+  height: 120px;
+  width: auto;
+  display: block;
+  padding: 25px 40px;
+}
+
 /*MENU SECTION*/
 /*HIDDEN MENU ITEMS ON MOBILE*/
 .header .menu {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
+  /*HAMBURGER MENU*/
 }
 
 .header .menu__btn {
@@ -83,6 +88,7 @@ body {
   top: 0;
 }
 
+/*HAMBURGER MENU ANIMATION*/
 .header .menu__icon {
   padding: 40px 20px;
   position: relative;
@@ -110,7 +116,7 @@ body {
   top: 5px;
 }
 
-.nav__icon:after {
+.header .menu__icon .nav__icon:after {
   background-color: #2f2c1e;
   display: block;
   content: "";
@@ -122,8 +128,8 @@ body {
 }
 
 /*DESKTOP VERSION OF THE MENU*/
-@media (min-width: 82.06em) {
-  /*1313:16 =82.06em*/
+@media (min-width: 83.18em) {
+  /*1331:16 =83.18em*/
   .header li {
     float: left;
   }
@@ -139,21 +145,27 @@ body {
   .header .menu__icon {
     display: none;
   }
-  .header ul .nav__button {
+  .btn__secondary {
     background-color: #2f2c1e;
+    text-transform: uppercase;
     text-decoration: none;
-    margin-top: 5px;
-    margin-right: 35px;
+    padding: 10px 15px;
     display: inline-block;
+    margin-left: 25px;
     border: none;
     cursor: pointer;
   }
-  .header ul .nav__button--a {
+  .btn__secondary--nav {
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 40px;
+  }
+  .btn__secondary--nav .btn__secondary--nav--a {
     color: #fff;
     margin-left: 0px;
-    padding: 15px 30px 10px 30px;
+    padding: 10px 25px;
   }
-  .header ul .nav__button--a:hover {
+  .btn__secondary--nav .btn__secondary--nav--a:hover {
     color: #e1dfd0;
   }
 }
@@ -221,8 +233,7 @@ body {
   }
 }
 
-.btn:link,
-.btn:visited {
+.btn__primary:link, .btn__primary:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 30px;
@@ -231,18 +242,18 @@ body {
   animation: moveInRight 1s ease-out;
 }
 
-.btn:hover {
+.btn__primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(47, 44, 30, 0.2);
 }
 
-.btn:active {
+.btn__primary:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(47, 44, 30, 0.2);
   color: #e1dfd0;
 }
 
-.btn--medium {
+.btn__primary--medium {
   background-color: #6e6745;
   color: #fff;
 }

@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /*Font Families- Google Font*/
 body {
@@ -11,14 +12,41 @@ body {
   font-weight: 400;
   line-height: 1.7;
   position: relative;
-  background-color: #777; }
+  background-color: #777;
+}
 
 .header {
   position: fixed;
   width: 100%;
   z-index: 100;
   background: #fff;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  /* HEADER style*/
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header ul a {
+  color: #2f2c1e;
+  display: block;
+  padding: 20px;
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: .8rem;
+}
+
+.header ul a:hover {
+  color: rgba(47, 44, 30, 0.6);
+}
+
+.header ul li:last-child {
+  margin-top: 8px;
+}
 
 /* SVG logo style*/
 #header__logo {
@@ -26,55 +54,47 @@ body {
   height: 120px;
   width: auto;
   display: block;
-  padding: 25px 40px; }
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden; }
-
-/* HEADER style*/
-.header ul a {
-  color: #2f2c1e;
-  display: block;
-  padding: 20px;
-  margin-left: 25px;
-  text-decoration: none;
-  font-size: .8rem; }
-
-.header ul a:hover {
-  color: rgba(47, 44, 30, 0.6); }
+  padding: 25px 40px;
+}
 
 /*MENU SECTION*/
 /*HIDDEN MENU ITEMS ON MOBILE*/
 .header .menu {
   clear: both;
   max-height: 0;
-  transition: max-height .2s ease-out; }
+  transition: max-height .2s ease-out;
+  /*HAMBURGER MENU*/
+}
 
 .header .menu__btn {
-  display: none; }
+  display: none;
+}
 
 .header .menu__btn:checked ~ .menu {
-  max-height: 320px; }
+  max-height: 320px;
+}
 
 .header .menu__btn:checked ~ .menu__icon .nav__icon {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 .header .menu__btn:checked ~ .menu__icon .nav__icon:before {
   transform: rotate(-45deg);
-  top: 0; }
+  top: 0;
+}
 
 .header .menu__btn:checked ~ .menu__icon .nav__icon:after {
   transform: rotate(45deg);
-  top: 0; }
+  top: 0;
+}
 
+/*HAMBURGER MENU ANIMATION*/
 .header .menu__icon {
   padding: 40px 20px;
   position: relative;
   float: right;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .header .menu__icon .nav__icon {
   background-color: #2f2c1e;
@@ -82,7 +102,8 @@ body {
   height: 1.9px;
   width: 20px;
   position: relative;
-  transition: background-color .2s ease-out; }
+  transition: background-color .2s ease-out;
+}
 
 .header .menu__icon .nav__icon:before {
   background-color: #2f2c1e;
@@ -92,9 +113,10 @@ body {
   width: 100%;
   position: absolute;
   transition: all .2s ease-out;
-  top: 5px; }
+  top: 5px;
+}
 
-.nav__icon:after {
+.header .menu__icon .nav__icon:after {
   background-color: #2f2c1e;
   display: block;
   content: "";
@@ -102,36 +124,51 @@ body {
   width: 100%;
   position: absolute;
   transition: all .2s ease-out;
-  top: -5px; }
+  top: -5px;
+}
 
 /*DESKTOP VERSION OF THE MENU*/
-@media (min-width: 82.06em) {
-  /*1313:16 =82.06em*/
+@media (min-width: 83.18em) {
+  /*1331:16 =83.18em*/
   .header li {
-    float: left; }
+    float: left;
+  }
   .header li a {
-    padding: 20px 35px; }
+    padding: 20px 35px;
+  }
   .header .menu {
     clear: none;
     float: right;
     max-height: none;
-    margin-top: 25px; }
+    margin-top: 25px;
+  }
   .header .menu__icon {
-    display: none; }
-  .header ul .nav__button {
+    display: none;
+  }
+  .btn__secondary {
     background-color: #2f2c1e;
+    text-transform: uppercase;
     text-decoration: none;
-    margin-top: 5px;
-    margin-right: 35px;
+    padding: 10px 15px;
     display: inline-block;
+    margin-left: 25px;
     border: none;
-    cursor: pointer; }
-  .header ul .nav__button--a {
+    cursor: pointer;
+  }
+  .btn__secondary--nav {
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 40px;
+  }
+  .btn__secondary--nav .btn__secondary--nav--a {
     color: #fff;
     margin-left: 0px;
-    padding: 15px 30px 10px 30px; }
-  .header ul .nav__button--a:hover {
-    color: #e1dfd0; } }
+    padding: 10px 25px;
+  }
+  .btn__secondary--nav .btn__secondary--nav--a:hover {
+    color: #e1dfd0;
+  }
+}
 
 /*MENU SECTION ENDS*/
 /*HERO section*/
@@ -139,7 +176,8 @@ body {
   height: 90vh;
   background-image: url(../img/hero-image-large.jpg);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+}
 
 .hero__text-box {
   position: absolute;
@@ -147,7 +185,8 @@ body {
   top: 55%;
   left: 55%;
   transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+}
 
 .hero__heading-primary {
   color: #2f2c1e;
@@ -160,52 +199,64 @@ body {
   animation-duration: 1s;
   animation-timing-function: ease-out;
   /* animation-iteration-count: 2; */
-  /* animation-delay: 2s; */ }
+  /* animation-delay: 2s; */
+}
 
 /*ANIMATIONS*/
 /*Move heading-primary to left*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-80px); }
+    transform: translateX(-80px);
+  }
   80% {
-    transform: translateX(5px); }
+    transform: translateX(5px);
+  }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 /*Move button-primary to rigth*/
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(80px); }
+    transform: translateX(80px);
+  }
   80% {
-    transform: translateX(-5px); }
+    transform: translateX(-5px);
+  }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
-.btn:link,
-.btn:visited {
+.btn__primary:link, .btn__primary:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 30px;
   display: inline-block;
   transition: all .2s;
-  animation: moveInRight 1s ease-out; }
+  animation: moveInRight 1s ease-out;
+}
 
-.btn:hover {
+.btn__primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(47, 44, 30, 0.2); }
+  box-shadow: 0 10px 20px rgba(47, 44, 30, 0.2);
+}
 
-.btn:active {
+.btn__primary:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(47, 44, 30, 0.2);
-  color: #e1dfd0; }
+  color: #e1dfd0;
+}
 
-.btn--medium {
+.btn__primary--medium {
   background-color: #6e6745;
-  color: #fff; }
+  color: #fff;
+}
 
 /* Wrapper helps to create consistent, centered content.*/
 /* .wrapper {
@@ -213,3 +264,4 @@ body {
     margin-left: auto;
     margin-right: auto;
 } */
+/*# sourceMappingURL=main.css.map */

@@ -37,8 +37,32 @@ body {
     z-index: 100;
     background: $color-white;
     backface-visibility: hidden;
+
+    & ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    /* HEADER style*/
+    & ul a {
+        color: $color-dark;
+        display: block;
+        padding: 20px;
+        margin-left: 25px;
+        text-decoration: none;
+        font-size: .8rem;
+    }
+
+    & ul a:hover {
+        color: rgba($color-dark, 0.6);
+    }
 }
 
+.header ul li:last-child {
+ margin-top: 8px;
+}
 
 /* SVG logo style*/
 #header__logo {
@@ -49,26 +73,6 @@ body {
     padding: 25px 40px;
 }
 
-.header ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-}
-
-/* HEADER style*/
-.header ul a {
-    color: $color-dark;
-    display: block;
-    padding: 20px;
-    margin-left: 25px;
-    text-decoration: none;
-    font-size: .8rem;
-}
-
-.header ul a:hover {
-    color: rgba($color-dark, 0.6) ;
-}
 
 /*MENU SECTION*/
 
@@ -77,71 +81,74 @@ body {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
+
+/*HAMBURGER MENU*/    
+    &__btn {
+        display: none;
+    }
+
+    &__btn:checked ~ .menu {
+        max-height: 320px;
+    }
+
+    &__btn:checked ~ .menu__icon .nav__icon {
+        background-color: transparent;
+    }
+
+    &__btn:checked ~ .menu__icon .nav__icon:before {
+        transform: rotate(-45deg);
+        top:0;
+    }
+
+    &__btn:checked ~ .menu__icon .nav__icon:after {
+        transform: rotate(45deg);
+        top:0;
+    }
+
 }
 
-.header .menu__btn {
-    display: none;
-}
-
-.header .menu__btn:checked ~ .menu {
-    max-height: 320px;
-}
-
-.header .menu__btn:checked ~ .menu__icon .nav__icon {
-    background-color: transparent;
-}
-
-.header .menu__btn:checked ~ .menu__icon .nav__icon:before {
-    transform: rotate(-45deg);
-    top:0;
-}
-
-.header .menu__btn:checked ~ .menu__icon .nav__icon:after {
-    transform: rotate(45deg);
-    top:0;
-}
-
-
+/*HAMBURGER MENU ANIMATION*/ 
 .header .menu__icon {
     padding: 40px 20px;
     position: relative;
     float: right;
     cursor: pointer;
-}
 
-.header .menu__icon .nav__icon {
-    background-color: #2f2c1e;
-    display: block;
-    height: 1.9px;
-    width: 20px;
-    position: relative;
-    transition: background-color .2s ease-out;
-}
+    & .nav__icon {
+        background-color: $color-dark;
+        display: block;
+        height: 1.9px;
+        width: 20px;
+        position: relative;
+        transition: background-color .2s ease-out;
+    }
 
-.header .menu__icon .nav__icon:before {
-    background-color: #2f2c1e;
-    content: "";
-    display: block;
-    height: 90%;
-    width: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    top: 5px;
-}
+    & .nav__icon:before {
+        background-color: $color-dark;
+        content: "";
+        display: block;
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: 5px;
+    }
 
-.nav__icon:after {
-    background-color: #2f2c1e;
-    display: block;
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    top: -5px;
+    & .nav__icon:after {
+        background-color: $color-dark;
+        display: block;
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: -5px;
+    }
+
 }
 
 /*DESKTOP VERSION OF THE MENU*/ 
-@media (min-width:82.06em) { /*1313:16 =82.06em*/
+@media (min-width:83.18em) { /*1331:16 =83.18em*/
     .header li {
         float: left;
     }
@@ -160,26 +167,34 @@ body {
     .header .menu__icon {
         display: none;
     }
-
-    .header ul .nav__button {
-        background-color:  #2f2c1e;
+    
+    .btn__secondary {
+        background-color: $color-dark;
+        text-transform: uppercase;
         text-decoration: none;
-        margin-top: 5px;
-        margin-right: 35px;
+        padding: 10px 15px;
         display: inline-block;
+        margin-left: 25px;
         border: none;
         cursor: pointer;
     }
+    
+    .btn__secondary--nav {
+        padding: 0px;
+        margin-top: 0px;
+        margin-right: 40px;
 
-    .header ul .nav__button--a {
-        color: $color-white;
-        margin-left: 0px;
-        padding: 15px 30px 10px 30px;
+        & .btn__secondary--nav--a {
+            color: $color-white;
+            margin-left: 0px;
+            padding: 10px 25px;
+            
+            // padding: 15px 30px 10px 30px;
+        }
 
-    }
-
-    .header ul .nav__button--a:hover  {
-        color: #e1dfd0;
+        & .btn__secondary--nav--a:hover  {
+            color: $color-light-1;
+        }
     }
 }
 /*MENU SECTION ENDS*/
@@ -190,20 +205,19 @@ body {
     background-image: url(../img/hero-image-large.jpg);
     background-size: cover;
     background-position: center;
-    
-}
 
-.hero__text-box {
-    position: absolute;
-    z-index: 4;
-    top: 55%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    &__text-box {
+        position: absolute;
+        z-index: 4;
+        top: 55%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 .hero__heading-primary {
-    color: #2f2c1e;
+    color: $color-dark;
     text-transform: uppercase;
     font-size: 2.5rem;
     font-weight: 400;
@@ -255,31 +269,34 @@ body {
     }
 }
 
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 15px 30px;
-    display: inline-block;
-    transition: all .2s;
+.btn__primary {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 30px;
+        display: inline-block;
+        transition: all .2s;
 
-    animation: moveInRight 1s ease-out;
-}
+        animation: moveInRight 1s ease-out;
+    }
 
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(47, 44, 30, 0.2);
-}
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-dark, 0.2);
+    }
 
-.btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(47, 44, 30, 0.2);
-    color: #e1dfd0;
-}
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba($color-dark, 0.2);
+        color: $color-light-1;
+    }
 
-.btn--medium {
-    background-color:#6e6745;
-    color: $color-white;
+    &--medium {
+        background-color:$color-medium;
+        color: $color-white;
+    }
+
 }
 
 
