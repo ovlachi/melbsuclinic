@@ -1,0 +1,160 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: $color-white;
+    backface-visibility: hidden;
+
+    & ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    /* HEADER style*/
+    & ul a {
+        color: $color-dark;
+        display: block;
+        padding: 20px;
+        margin-left: 25px;
+        text-decoration: none;
+        font-size: .8rem;
+    }
+
+    & ul a:hover {
+        color: rgba($color-dark, 0.6);
+        transition: all .4s;
+    }
+}
+
+.header ul li:last-child {
+ margin-top: 8px;
+}
+
+/* SVG logo style*/
+#header__logo {
+    float: left;
+    height: 120px;
+    width: auto;
+    display: block;
+    padding: 25px 40px;
+}
+
+
+/*MENU SECTION*/
+
+/*HIDDEN MENU ITEMS ON MOBILE*/
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+
+/*HAMBURGER MENU*/    
+    &__btn {
+        display: none;
+    }
+
+    &__btn:checked ~ .menu {
+        max-height: 320px;
+    }
+
+    &__btn:checked ~ .menu__icon .nav__icon {
+        background-color: transparent;
+    }
+
+    &__btn:checked ~ .menu__icon .nav__icon:before {
+        transform: rotate(-45deg);
+        top:0;
+    }
+
+    &__btn:checked ~ .menu__icon .nav__icon:after {
+        transform: rotate(45deg);
+        top:0;
+    }
+
+}
+
+/*HAMBURGER MENU ANIMATION*/ 
+.header .menu__icon {
+    padding: 40px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+
+    & .nav__icon {
+        background-color: $color-dark;
+        display: block;
+        height: 1.9px;
+        width: 20px;
+        position: relative;
+        transition: background-color .2s ease-out;
+    }
+
+    & .nav__icon:before {
+        background-color: $color-dark;
+        content: "";
+        display: block;
+        height: 90%;
+        width: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: 5px;
+    }
+
+    & .nav__icon:after {
+        background-color: $color-dark;
+        display: block;
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        top: -5px;
+    }
+
+}
+
+/*DESKTOP VERSION OF THE MENU*/ 
+@media (min-width:83.18em) { /*1331:16 =83.18em*/
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 35px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+        margin-top: 25px;
+    }
+
+    .header .menu__icon {
+        display: none;
+    }
+    
+
+    
+    .btn__secondary--nav {
+        padding: 0px;
+        margin-top: 0px;
+        margin-right: 40px;
+
+        & .btn__secondary--nav--a {
+            color: $color-white;
+            margin-left: 0px;
+            padding: 10px 25px;
+            
+            // padding: 15px 30px 10px 30px;
+        }
+
+        & .btn__secondary--nav--a:hover  {
+            color: $color-light-1;
+            transition: all .4s;
+        }
+    }
+}
+/*MENU SECTION ENDS*/

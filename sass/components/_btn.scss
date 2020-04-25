@@ -1,0 +1,52 @@
+
+.btn__primary {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 30px;
+        display: inline-block;
+        transition: all .2s;
+
+        animation: moveInRight 1s ease-out;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-dark, 0.2);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba($color-dark, 0.2);
+        color: $color-light-1;
+    }
+
+    &--medium {
+        background-color:$color-medium;
+        color: $color-white;
+    }
+}
+
+.btn__secondary {
+    background-color: $color-dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .9rem;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-left: 25px;
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-light-1;
+        transition: all .2s;
+    }
+}
+
+
+
+
+

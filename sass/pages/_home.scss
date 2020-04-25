@@ -1,0 +1,54 @@
+/*Home HERO section*/
+
+.hero {
+    height: 90vh;
+    background-image: url(../img/hero-image-large.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__text-box {
+        position: absolute;
+        z-index: 4;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+.hero__heading-primary {
+    color: $color-dark;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    backface-visibility: hidden;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+
+    /* animation-iteration-count: 2; */
+    /* animation-delay: 2s; */
+}
+
+.home__intro {
+    padding: 4rem 0;
+    text-align: center;
+
+    &__heading {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
