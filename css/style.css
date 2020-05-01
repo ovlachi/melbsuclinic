@@ -39,17 +39,21 @@ body {
   position: relative;
   background-color: #fff; }
 
-.main {
-  position: absolute; }
-
 /* Wrapper helps to create consistent, centered content.*/
 .wrapper {
   max-width: 85%;
   margin-left: auto;
   margin-right: auto; }
 
+/***TOP MARGINS***/
 .u-margin__top--small {
-  margin-top: 1.5rem; }
+  margin-top: 1rem; }
+
+.u-margin__top--medium {
+  margin-top: 2.5rem; }
+
+.u-margin__top--large {
+  margin-top: 3.5rem; }
 
 .btn__primary:link, .btn__primary:visited {
   text-transform: uppercase;
@@ -189,8 +193,8 @@ body {
     top: -5px; }
 
 /*DESKTOP VERSION OF THE MENU*/
-@media (min-width: 83.18em) {
-  /*1331:16 =83.18em*/
+@media (min-width: 86.93em) {
+  /*1391:16 =86.93em*/
   .header li {
     float: left; }
   .header li a {
@@ -220,7 +224,8 @@ body {
   height: 90vh;
   background-image: url(../img/hero-image-large.jpg);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  position: relative; }
   .hero__text-box {
     position: absolute;
     z-index: 4;
@@ -252,3 +257,13 @@ body {
   .home__intro__text {
     width: 80%;
     margin: 0 auto; }
+
+.featured__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.featured__item {
+  padding: 3rem;
+  box-sizing: border-box;
+  flex-basis: 45%; }
