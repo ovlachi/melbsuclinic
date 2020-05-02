@@ -8,7 +8,6 @@
     box-sizing: border-box;
 }
 
-
 /*Font Families- Google Font*/
 body {
     font-family: 'Josefin Sans', sans-serif;
@@ -19,9 +18,11 @@ body {
     background-color: $color-white;
 } 
 
-// .main {
-//     position: absolute;
-// }
+img {
+    max-width: 100%;
+    // display: block;
+}
+
 
 /* Wrapper helps to create consistent, centered content.*/
  .wrapper {
