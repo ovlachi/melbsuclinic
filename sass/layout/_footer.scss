@@ -1,0 +1,92 @@
+footer {
+    background-color: $color-dark;
+}
+
+.footer {
+    padding: 3rem 3rem 0 3rem;
+    color: $color-white;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    &__item {
+        text-align: left;
+    }
+
+    &__logo {
+        width: 100px;
+        height: auto;
+        margin-right: 5rem;
+    }
+
+    &__list {
+        list-style: none;
+        color: $color-light-1;
+        font-size: .8rem;
+        font-weight: 300;
+        line-height: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    & ul a {
+        color: $color-light-1;
+        text-decoration: none;
+        font-size: .8rem;
+    }
+
+    & ul a:hover {
+        color: rgba($color-light-2, 0.6);
+        transition: all .3s;
+    }
+
+    &__social {   
+        display: flex;  
+        align-items: center;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+        //@warn: $color-medium;
+        color: $color-light-1; 
+        overflow: hidden;
+        
+    }
+
+    &__icon {
+        text-align: center;
+        width: 1.6rem;
+        fill:  $color-light-1;
+        margin: 0 20px 0 0;
+
+        & a {
+            color: $color-light-1;
+            text-decoration: none;
+        }
+
+        & a:hover {
+            fill: rgba($color-light-2, 0.6);
+            transition: all .3s;
+        }
+    }
+
+
+
+    &__copyright {
+        font-size: .8rem;
+        font-weight: 300;
+        text-align: left;
+        margin: 70px auto;
+        color: $color-light-1; 
+
+        & a {
+            color: $color-light-1;
+            text-decoration: none;
+            font-size: .8rem;
+        }
+
+        & a:hover {
+            color: rgba($color-light-2, 0.6);
+            transition: all .3s;
+        }
+    }
+}
+

@@ -36,7 +36,6 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.7;
-  position: relative;
   background-color: #fff; }
 
 img {
@@ -141,12 +140,28 @@ img {
   .featured {
     display: flex;
     align-items: center;
-    justify-content: space-around; }
+    justify-content: center; }
     .featured__item {
       padding: 3rem;
       box-sizing: border-box;
       flex-basis: 48%;
       text-align: center; } }
+
+.contact {
+  background-color: #e1dfd0; }
+  .contact__box {
+    padding: 4rem;
+    text-align: center; }
+  .contact__text {
+    width: 80%;
+    margin: 0 auto; }
+  .contact__details {
+    font-weight: 400;
+    font-size: 1.6rem;
+    backface-visibility: hidden;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
 .header {
   position: fixed;
@@ -262,6 +277,67 @@ img {
       transition: all .4s; } }
 
 /*MENU SECTION ENDS*/
+footer {
+  background-color: #2f2c1e; }
+
+.footer {
+  padding: 3rem 3rem 0 3rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly; }
+  .footer__item {
+    text-align: left; }
+  .footer__logo {
+    width: 100px;
+    height: auto;
+    margin-right: 5rem; }
+  .footer__list {
+    list-style: none;
+    color: #e1dfd0;
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    text-transform: uppercase; }
+  .footer ul a {
+    color: #e1dfd0;
+    text-decoration: none;
+    font-size: .8rem; }
+  .footer ul a:hover {
+    color: rgba(186, 180, 145, 0.6);
+    transition: all .3s; }
+  .footer__social {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    color: #e1dfd0;
+    overflow: hidden; }
+  .footer__icon {
+    text-align: center;
+    width: 1.6rem;
+    fill: #e1dfd0;
+    margin: 0 20px 0 0; }
+    .footer__icon a {
+      color: #e1dfd0;
+      text-decoration: none; }
+    .footer__icon a:hover {
+      fill: rgba(186, 180, 145, 0.6);
+      transition: all .3s; }
+  .footer__copyright {
+    font-size: .8rem;
+    font-weight: 300;
+    text-align: left;
+    margin: 70px auto;
+    color: #e1dfd0; }
+    .footer__copyright a {
+      color: #e1dfd0;
+      text-decoration: none;
+      font-size: .8rem; }
+    .footer__copyright a:hover {
+      color: rgba(186, 180, 145, 0.6);
+      transition: all .3s; }
+
 /*Home HERO section*/
 .hero {
   height: 90vh;

@@ -1,0 +1,23 @@
+.contact {
+    background-color: $color-light-1;
+    
+
+    &__box {
+        padding: 4rem;
+        text-align: center;
+    }
+
+    &__text {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__details {
+        font-weight: 400;
+        font-size: 1.6rem;
+        backface-visibility: hidden;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+}
