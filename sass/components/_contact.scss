@@ -3,7 +3,7 @@
     
 
     &__box {
-        padding: 4rem;
+        padding: 2rem 0;
         text-align: center;
     }
 
@@ -19,5 +19,14 @@
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        
+        @include respond(phone) {
+            font-size: 1.3rem;
+        }
     }
+
+    
+
+
 }

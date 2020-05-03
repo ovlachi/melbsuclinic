@@ -9,6 +9,10 @@ footer {
     display: flex;
     justify-content: space-evenly;
 
+    @include respond(phone) {
+        padding: 3rem 1rem 0 1rem;
+    }
+
     &__item {
         text-align: left;
     }
@@ -17,6 +21,10 @@ footer {
         width: 100px;
         height: auto;
         margin-right: 5rem;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__list {
@@ -26,12 +34,23 @@ footer {
         font-weight: 300;
         line-height: 1.8rem;
         text-transform: uppercase;
+
+        @include respond(phone) {
+            line-height: .9rem;
+        }
     }
 
     & ul a {
         color: $color-light-1;
         text-decoration: none;
         font-size: .8rem;
+
+        @include respond(phone) {
+            font-size: .6rem;
+            line-height: 2.2rem;
+            text-align: left;
+            justify-content: space-between;
+        }
     }
 
     & ul a:hover {
@@ -56,19 +75,23 @@ footer {
         width: 1.6rem;
         fill:  $color-light-1;
         margin: 0 20px 0 0;
+     
 
         & a {
             color: $color-light-1;
             text-decoration: none;
+            padding: 0 2rem;
+            fill:  $color-light-1;
         }
 
         & a:hover {
-            fill: rgba($color-light-2, 0.6);
-            transition: all .3s;
+            color: $color-light-1;
+            text-decoration: none;
+            padding: 0 2rem;
+            fill:  $color-medium;
         }
+
     }
-
-
 
     &__copyright {
         font-size: .8rem;
@@ -76,6 +99,12 @@ footer {
         text-align: left;
         margin: 70px auto;
         color: $color-light-1; 
+
+        @include respond(phone) {
+            font-size: .5rem;
+            width: 40vw;
+            margin-left: 5px;
+        }
 
         & a {
             color: $color-light-1;

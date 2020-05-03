@@ -1,3 +1,17 @@
+/* 
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900px - 1200px: Tablet portrait
+(1200 -1800): normal styles applies (Desktop)
+1800px +: Big screens
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ 
+*/
 /*COLORS SASS VARIABLES*/
 /*ANIMATIONS*/
 /*Move heading-primary to left*/
@@ -106,6 +120,7 @@ img {
 /*ALERT SECTION*/
 .alert {
   position: relative;
+  width: 100%;
   background-color: #fceba9;
   text-align: center;
   padding: 1.8rem; }
@@ -135,6 +150,9 @@ img {
 .featured__title {
   text-transform: uppercase;
   font-size: 1.4rem; }
+  @media (max-width: 37.5em) {
+    .featured__title {
+      font-size: 1.2rem; } }
 
 @media (min-width: 1250px) {
   .featured {
@@ -150,7 +168,7 @@ img {
 .contact {
   background-color: #e1dfd0; }
   .contact__box {
-    padding: 4rem;
+    padding: 2rem 0;
     text-align: center; }
   .contact__text {
     width: 80%;
@@ -162,6 +180,9 @@ img {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
+    @media (max-width: 37.5em) {
+      .contact__details {
+        font-size: 1.3rem; } }
 
 .header {
   position: fixed;
@@ -170,6 +191,7 @@ img {
   background: #fff;
   backface-visibility: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
   /* HEADER style*/ }
   .header ul {
     margin: 0;
@@ -189,6 +211,10 @@ img {
 
 .header ul li:last-child {
   margin-top: 8px; }
+  .header ul li:last-child a {
+    color: #fff;
+    margin: 0;
+    overflow: hidden; }
 
 /* SVG logo style*/
 #header__logo {
@@ -197,6 +223,11 @@ img {
   width: auto;
   display: block;
   padding: 25px 40px; }
+  @media (max-width: 37.5em) {
+    #header__logo {
+      height: 100px;
+      width: auto;
+      padding: 25px 20px; } }
 
 /*MENU SECTION*/
 /*HIDDEN MENU ITEMS ON MOBILE*/
@@ -251,12 +282,12 @@ img {
     top: -5px; }
 
 /*DESKTOP VERSION OF THE MENU*/
-@media (min-width: 86.93em) {
-  /*1391:16 =86.93em*/
+@media (min-width: 75em) {
+  /*1200:16 =86.93em*/
   .header li {
     float: left; }
   .header li a {
-    padding: 20px 35px; }
+    padding: 20px 10px; }
   .header .menu {
     clear: none;
     float: right;
@@ -285,12 +316,18 @@ footer {
   color: #fff;
   display: flex;
   justify-content: space-evenly; }
+  @media (max-width: 37.5em) {
+    .footer {
+      padding: 3rem 1rem 0 1rem; } }
   .footer__item {
     text-align: left; }
   .footer__logo {
     width: 100px;
     height: auto;
     margin-right: 5rem; }
+    @media (max-width: 37.5em) {
+      .footer__logo {
+        display: none; } }
   .footer__list {
     list-style: none;
     color: #e1dfd0;
@@ -298,10 +335,19 @@ footer {
     font-weight: 300;
     line-height: 1.8rem;
     text-transform: uppercase; }
+    @media (max-width: 37.5em) {
+      .footer__list {
+        line-height: .9rem; } }
   .footer ul a {
     color: #e1dfd0;
     text-decoration: none;
     font-size: .8rem; }
+    @media (max-width: 37.5em) {
+      .footer ul a {
+        font-size: .6rem;
+        line-height: 2.2rem;
+        text-align: left;
+        justify-content: space-between; } }
   .footer ul a:hover {
     color: rgba(186, 180, 145, 0.6);
     transition: all .3s; }
@@ -320,16 +366,25 @@ footer {
     margin: 0 20px 0 0; }
     .footer__icon a {
       color: #e1dfd0;
-      text-decoration: none; }
+      text-decoration: none;
+      padding: 0 2rem;
+      fill: #e1dfd0; }
     .footer__icon a:hover {
-      fill: rgba(186, 180, 145, 0.6);
-      transition: all .3s; }
+      color: #e1dfd0;
+      text-decoration: none;
+      padding: 0 2rem;
+      fill: #6e6745; }
   .footer__copyright {
     font-size: .8rem;
     font-weight: 300;
     text-align: left;
     margin: 70px auto;
     color: #e1dfd0; }
+    @media (max-width: 37.5em) {
+      .footer__copyright {
+        font-size: .5rem;
+        width: 40vw;
+        margin-left: 5px; } }
     .footer__copyright a {
       color: #e1dfd0;
       text-decoration: none;
@@ -341,6 +396,7 @@ footer {
 /*Home HERO section*/
 .hero {
   height: 90vh;
+  width: 100%;
   background-image: url(../img/hero-image-large.jpg);
   background-size: cover;
   background-position: center;
@@ -365,6 +421,10 @@ footer {
   animation-timing-function: ease-out;
   /* animation-iteration-count: 2; */
   /* animation-delay: 2s; */ }
+  @media (max-width: 37.5em) {
+    .hero__heading-primary {
+      font-size: 1.6rem;
+      margin-top: 1.5rem; } }
 
 .home__intro {
   padding: 4rem 0;
@@ -373,6 +433,9 @@ footer {
     font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: 1.5rem; }
+    @media (max-width: 37.5em) {
+      .home__intro__heading {
+        font-size: 1.4rem; } }
   .home__intro__text {
     width: 80%;
     margin: 0 auto; }

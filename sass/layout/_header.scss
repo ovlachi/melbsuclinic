@@ -5,6 +5,7 @@
     background: $color-white;
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
+    overflow: hidden;
 
     & ul {
         margin: 0;
@@ -30,8 +31,15 @@
 }
 
 .header ul li:last-child {
- margin-top: 8px;
+    margin-top: 8px;
+
+    & a {
+        color: $color-white;
+        margin: 0;
+        overflow: hidden;
+    }
 }
+
 
 /* SVG logo style*/
 #header__logo {
@@ -40,6 +48,12 @@
     width: auto;
     display: block;
     padding: 25px 40px;
+
+    @include respond(phone) {
+        height: 100px;
+        width: auto;
+        padding: 25px 20px;
+    }
 }
 
 
@@ -117,13 +131,13 @@
 }
 
 /*DESKTOP VERSION OF THE MENU*/ 
-@media (min-width:86.93em) { /*1391:16 =86.93em*/
+@media (min-width:75em) { /*1200:16 =86.93em*/
     .header li {
         float: left;
     }
 
     .header li a {
-        padding: 20px 35px;
+        padding: 20px 10px;
     }
 
     .header .menu {
