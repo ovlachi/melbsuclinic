@@ -1,5 +1,10 @@
 .featured {
 
+    @include respond(phone) {
+        margin-top: 0; 
+        margin-bottom: 2.5rem;
+    }
+
     &__item {
         box-sizing: border-box;
         width: 100%;
@@ -8,8 +13,12 @@
 
     &__image {
         align-content: center;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
-    
+
     &__icon {
         font-size: .2rem;
         width: 4rem;

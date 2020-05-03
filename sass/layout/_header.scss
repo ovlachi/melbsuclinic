@@ -170,6 +170,10 @@
             color: $color-light-1;
             transition: all .4s;
         }
+
+        & .btn__secondary--nav--a:active  {
+            color: $color-light-1;
+        }
     }
 }
 /*MENU SECTION ENDS*/
