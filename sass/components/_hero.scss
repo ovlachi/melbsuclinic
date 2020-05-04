@@ -8,6 +8,10 @@
     background-position: top;
     position: relative;
 
+    @include respond(tab-land) {
+        height: 45vh;
+    }
+
 
     //IF THERE IS HEADING TEXT
     // &__text-box {

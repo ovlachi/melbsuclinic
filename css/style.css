@@ -179,6 +179,7 @@ img {
     padding: 2rem 0;
     text-align: center; }
   .contact__text {
+    font-size: 1.2rem;
     width: 80%;
     margin: 0 auto; }
   .contact__details {
@@ -200,13 +201,48 @@ img {
   background-size: cover;
   background-position: top;
   position: relative; }
+  @media (max-width: 75em) {
+    .hero__page {
+      height: 45vh; } }
 
 .intro {
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  max-width: 70%; }
+  @media (max-width: 37.5em) {
+    .intro {
+      padding: 0;
+      max-width: 90%; } }
   .intro__text {
     font-size: 2rem;
     line-height: 2.8rem;
     font-weight: 300; }
+    @media (max-width: 37.5em) {
+      .intro__text {
+        font-size: 1.2rem;
+        line-height: 2.4rem; } }
+
+.highlight {
+  background-color: #e1dfd0;
+  padding: 3rem 0; }
+  @media (max-width: 37.5em) {
+    .highlight {
+      padding: 1rem 0;
+      max-width: 100%; } }
+  .highlight__box {
+    max-width: 70%;
+    padding-top: 2rem; }
+    @media (max-width: 37.5em) {
+      .highlight__box {
+        max-width: 80%; } }
+  .highlight__list {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2.8rem; }
+    @media (max-width: 37.5em) {
+      .highlight__list {
+        font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 2rem; } }
 
 .header {
   position: fixed;
