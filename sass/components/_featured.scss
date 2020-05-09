@@ -34,6 +34,11 @@
             font-size: 1.2rem;
         }
     }
+
+    &__text {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
 }
 
 @media (min-width: 1250px) {

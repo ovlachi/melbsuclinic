@@ -2,6 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--SEO-->
+    <meta name="robots" content="index, follow">
     <!--GOOGLE FONTS-->
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
@@ -202,30 +204,42 @@
         <div class="wrapper contact__box">
             <h3 class="home__intro__heading u-margin__bottom--small u-margin__top--small">Contact</h3>
             <p class="contact__text">
-                Please send a brief text message with your name, phone number, a short description of your current issues, and availability for a short chat, and you will receive a call back ASAP.
+                Please give us a call, send an email or use the contact form below to get in touch.
             </p>
             <p class="contact__details u-margin__top--medium u-margin__bottom--medium">
                 M: 0426 696 377 <br>
             info@melbsuclinic.com.au
         </p>
 
-        <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>Your Name: <input type="text" name="name" /></label>   
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
-        
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <p>
-              <button class="btn__primary btn__primary--medium u-margin__bottom--medium" type="submit">Send</button>
-            </p>
-          </form>
+        <div class="contact__form">
+            <form class="form" name="contact" method="POST" data-netlify="true">
+                <div class="form__group">
+                    <input type="text" class="form__input" id="name" placeholder="Full Name" required>
+                    <label for="name" class="form__label">Full Name</label>
+                </div>
 
-            <a href="#" class="btn__primary btn__primary--medium u-margin__bottom--medium">CONTACT US</a>
+                <div class="form__group">
+                    <input type="email" class="form__input" id="email" placeholder="Email address" required>
+                    <label for="email" class="form__label">Email address</label>
+                </div>
+
+                <div class="form__group">
+                    <input type="tel" class="form__input" id="phone" placeholder="Phone number (format: 0412345678)" name="phone" maxlength="10" pattern="[0-9]{10}" required>
+                    <label for="phone" class="form__label">Phone number</label>
+                </div>
+
+                <div class="form__group">
+                    <textarea name="message" class="form__input form__input--message" id="message" placeholder="Message"></textarea>
+                    <label for="message" class="form__label">Message </label>
+                </div>
+
+                <div class="form__group">
+                    <button type="submit" class="btn__primary btn__primary--medium u-margin__bottom--medium">SUBMIT&rarr;</button>
+                </div>
+            </form>
+        </div>
+
+            
         </div>
     </section>
 
