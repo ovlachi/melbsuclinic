@@ -133,11 +133,13 @@ img {
   font-size: 1.2rem;
   font-weight: 300; }
   .alert__text--a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #2f2c1e;
     font-weight: 700; }
   .alert__text--a:hover {
-    text-decoration: underline; }
+    text-decoration: none;
+    color: #ff7730;
+    transform: all 2s; }
 
 @media (max-width: 37.5em) {
   .featured {
@@ -166,7 +168,8 @@ img {
   font-size: 1.4rem; }
   @media (max-width: 37.5em) {
     .featured__title {
-      font-size: 1.2rem; } }
+      font-size: 1.2rem;
+      margin-top: 3rem; } }
 
 .featured__text {
   font-size: 1.2rem;
@@ -296,6 +299,85 @@ img {
   .form__input:placeholder-shown + .form__label {
     opacity: 0;
     visibility: hidden; }
+
+.quote {
+  background-color: #e1dfd0;
+  padding: 3rem 0; }
+  @media (max-width: 37.5em) {
+    .quote {
+      padding: 1rem 0;
+      max-width: 100%; } }
+  .quote__box {
+    max-width: 60%;
+    padding-top: 2rem; }
+    @media (max-width: 37.5em) {
+      .quote__box {
+        max-width: 80%; } }
+  .quote__text {
+    font-style: oblique;
+    font-size: 1.8rem; }
+    @media (max-width: 37.5em) {
+      .quote__text {
+        font-size: 1rem; } }
+  .quote__cite {
+    font-size: 1rem; }
+    @media (max-width: 37.5em) {
+      .quote__cite {
+        font-size: .7rem; } }
+
+blockquote {
+  font-family: Georgia, serif;
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em 2em 0.5em 3em; }
+
+/* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+blockquote:before {
+  font-family: Georgia, serif;
+  position: absolute;
+  font-size: 4em;
+  line-height: 1;
+  top: 0;
+  left: 0;
+  color: #6e6745;
+  content: "\201C"; }
+
+blockquote:after {
+  font-family: Georgia, serif;
+  position: absolute;
+  /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+  float: right;
+  font-size: 4em;
+  line-height: 1;
+  right: 4rem;
+  bottom: -0.5em;
+  color: #6e6745;
+  content: "\201D"; }
+
+.quote__footer {
+  padding: 0 0 0 6rem;
+  text-align: left;
+  background-color: transparent; }
+
+blockquote cite:before {
+  content: "\2013"; }
+
+.text__hyperlink {
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* active link */ }
+  .text__hyperlink:link {
+    color: #6e6745;
+    text-decoration: none;
+    border-bottom: 1px solid; }
+  .text__hyperlink:visited {
+    color: #bab491; }
+  .text__hyperlink:hover {
+    color: #ff7730;
+    border-bottom: none; }
+  .text__hyperlink:active {
+    color: #e1dfd0; }
 
 .header {
   position: fixed;
@@ -556,3 +638,15 @@ footer {
     margin: 0 auto;
     font-size: 1.4rem;
     font-weight: 300; }
+
+/* HERO HYPNOSIS section*/
+.hero__hypnosis {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../img/what-is-hypnosisCTA-large.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media (max-width: 75em) {
+    .hero__hypnosis {
+      height: 45vh; } }

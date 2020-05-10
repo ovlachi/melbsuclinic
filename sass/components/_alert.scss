@@ -12,12 +12,14 @@
     font-weight: 300;
 
     &--a {
-        text-decoration: none;
+        text-decoration: underline;
         color: $color-dark;
         font-weight: 700;
     }
 
     &--a:hover {
-        text-decoration: underline;
+        text-decoration: none;
+        color: $color-form-invalid;
+        transform: all 2s;
     }
 }

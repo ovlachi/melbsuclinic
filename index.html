@@ -129,7 +129,7 @@
                     <li><a href="#referral-pathways.html">REFERRAL PATHWAYS</a></li>
                     <li><a href="#programs.html">TREATMENT PROGRAMS</a></li>
                     <li><a href="#consultations">ONLINE CONSULTATIONS</a></li>
-                    <li class="btn__secondary btn__secondary--nav"><a href="#contact-us" class="btn__secondary--nav--a">CONTACT US</a></li>
+                    <li class="btn__secondary btn__secondary--nav"><a href="#contact" class="btn__secondary--nav--a">CONTACT US</a></li>
                 </ul>
     </header>
 
@@ -168,7 +168,7 @@
                 </svg>
                 <h3 class="featured__title u-margin__bottom--small">What is Hypnosis</h3>
                 <p class="featured__text">As a matter of fact, we all experience altered states of consciousness in our day to day lives, in the form of daydreaming, focused attention, or deep concentration.</p>
-                <a href="#" class="btn__secondary u-margin__top--medium">LEARN MORE</a>
+                <a href="what-is-hypnosis.html" class="btn__secondary u-margin__top--medium">LEARN MORE</a>
         </div> 
     </section>
 
@@ -200,46 +200,44 @@
         </div> 
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="wrapper contact__box">
-            <h3 class="home__intro__heading u-margin__bottom--small u-margin__top--small">Contact</h3>
+            <h3 class="home__intro__heading u-margin__bottom--small u-margin__top--small">Contact us</h3>
             <p class="contact__text">
                 Please give us a call, send an email or use the contact form below to get in touch.
             </p>
             <p class="contact__details u-margin__top--medium u-margin__bottom--medium">
                 M: 0426 696 377 <br>
             info@melbsuclinic.com.au
-        </p>
+            </p>
 
-        <div class="contact__form">
-            <form class="form" name="contact" method="POST" data-netlify="true">
-                <div class="form__group">
-                    <input type="text" class="form__input" id="name" placeholder="Full Name" required>
-                    <label for="name" class="form__label">Full Name</label>
-                </div>
+            <div class="contact__form">
+                <form class="form" name="contact" method="POST" data-netlify="true">
+                    <div class="form__group">
+                        <input type="text" class="form__input" id="name" placeholder="Full Name*" required>
+                        <label for="name" class="form__label">Full Name</label>
+                    </div>
 
-                <div class="form__group">
-                    <input type="email" class="form__input" id="email" placeholder="Email address" required>
-                    <label for="email" class="form__label">Email address</label>
-                </div>
+                    <div class="form__group">
+                        <input type="email" class="form__input" id="email" placeholder="Email address*" required>
+                        <label for="email" class="form__label">Email address</label>
+                    </div>
 
-                <div class="form__group">
-                    <input type="tel" class="form__input" id="phone" placeholder="Phone number (format: 0412345678)" name="phone" maxlength="10" pattern="[0-9]{10}" required>
-                    <label for="phone" class="form__label">Phone number</label>
-                </div>
+                    <div class="form__group">
+                        <input type="tel" class="form__input" id="phone" placeholder="Phone number (format: 0412345678)*" name="phone" maxlength="10" pattern="[0-9]{10}" required>
+                        <label for="phone" class="form__label">Phone number</label>
+                    </div>
 
-                <div class="form__group">
-                    <textarea name="message" class="form__input form__input--message" id="message" placeholder="Message"></textarea>
-                    <label for="message" class="form__label">Message </label>
-                </div>
+                    <div class="form__group">
+                        <textarea name="message" class="form__input form__input--message" id="message" placeholder="Message"></textarea>
+                        <label for="message" class="form__label">Message </label>
+                    </div>
 
-                <div class="form__group">
-                    <button type="submit" class="btn__primary btn__primary--medium u-margin__bottom--medium">SUBMIT&rarr;</button>
-                </div>
-            </form>
-        </div>
-
-            
+                    <div class="form__group">
+                        <button type="submit" class="btn__primary btn__primary--medium u-margin__bottom--medium">SUBMIT&rarr;</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -251,7 +249,7 @@
                         <a href="about.html">About us</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="#">What is Hypnosis</a>
+                        <a href="what-is-hypnosis.html">What is Hypnosis</a>
                     </li>
                     <li class="footer__list-item">
                         <a href="#">Private Outpatient Recovery Programs</a>
@@ -271,7 +269,7 @@
                         <a href="#">ONLINE CONSULTATION</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="#">CONTACT US</a>
+                        <a href="#contact">CONTACT US</a>
                     </li>
                     <li class="footer__list-item">
                         <a href="#">PRIVACY AND CONFIDENTIALITY</a>

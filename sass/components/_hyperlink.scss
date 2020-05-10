@@ -1,0 +1,21 @@
+.text__hyperlink {
+    /* unvisited link */ 
+    &:link {
+        color: $color-medium;
+        text-decoration: none;
+        border-bottom: 1px solid;
+    }
+    /* visited link */
+    &:visited {
+        color: $color-light-2;
+    }
+    /* mouse over link */
+    &:hover {
+        color: $color-form-invalid;
+        border-bottom: none;
+    }
+    /* active link */
+    &:active {
+        color: $color-light-1;
+    }
+}
