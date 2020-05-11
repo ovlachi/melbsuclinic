@@ -224,6 +224,42 @@ img {
     .hero__page {
       height: 45vh; } }
 
+/* HERO HYPNOSIS section*/
+.hero__hypnosis {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../img/what-is-hypnosisCTA-large.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media (max-width: 75em) {
+    .hero__hypnosis {
+      height: 45vh; } }
+
+/* HERO REFERRAL section*/
+.hero__referral {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../img/referral-pathways-CTA-large.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media (max-width: 75em) {
+    .hero__referral {
+      height: 45vh; } }
+
+/* HERO PRIVACY section*/
+.hero__privacy {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../img/privacy-and-confidentiality-CTA-large.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media (max-width: 75em) {
+    .hero__privacy {
+      height: 45vh; } }
+
 .intro {
   padding: 3rem 0;
   max-width: 70%; }
@@ -638,15 +674,3 @@ footer {
     margin: 0 auto;
     font-size: 1.4rem;
     font-weight: 300; }
-
-/* HERO HYPNOSIS section*/
-.hero__hypnosis {
-  height: 70vh;
-  width: 100%;
-  background-image: url(../img/what-is-hypnosisCTA-large.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative; }
-  @media (max-width: 75em) {
-    .hero__hypnosis {
-      height: 45vh; } }

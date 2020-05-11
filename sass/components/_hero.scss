@@ -1,5 +1,4 @@
 /*PAGE HERO section*/
-
 .hero__page {
     height: 70vh;
     width: 100%;
@@ -11,7 +10,6 @@
     @include respond(tab-land) {
         height: 45vh;
     }
-
 
     //IF THERE IS HEADING TEXT
     // &__text-box {
@@ -25,24 +23,77 @@
 }
 
 
-/////HEADING/////
-// .hero__heading-primary {
-//     color: $color-dark;
-//     text-transform: uppercase;
-//     font-size: 2.5rem;
-//     font-weight: 400;
-//     margin-bottom: 30px;
-//     backface-visibility: hidden;
+  /* HERO HYPNOSIS section*/
+  .hero__hypnosis {
+    height: 70vh;
+    width: 100%;
+    background-image: url(../img/what-is-hypnosisCTA-large.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
 
-//     animation-name: moveInLeft;
-//     animation-duration: 1s;
-//     animation-timing-function: ease-out;
+    @include respond(tab-land) {
+        height: 45vh;
+    }
 
-//     /* animation-iteration-count: 2; */
-//     /* animation-delay: 2s; */
+    //IF THERE IS HEADING TEXT
+    // &__text-box {
+    //     position: absolute;
+    //     z-index: 4;
+    //     top: 55%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     text-align: center;
+    // }
+}
 
-//     @include respond(phone) {
-//         font-size: 1.6rem;
-//         margin-top: 1.5rem;
-//     }
-// }
+
+    /* HERO REFERRAL section*/
+    .hero__referral {
+        height: 70vh;
+        width: 100%;
+        background-image: url(../img/referral-pathways-CTA-large.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
+    
+        @include respond(tab-land) {
+            height: 45vh;
+        }
+    
+        //IF THERE IS HEADING TEXT
+        // &__text-box {
+        //     position: absolute;
+        //     z-index: 4;
+        //     top: 55%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     text-align: center;
+        // }
+    }
+
+
+    /* HERO PRIVACY section*/
+    .hero__privacy {
+        height: 70vh;
+        width: 100%;
+        background-image: url(../img/privacy-and-confidentiality-CTA-large.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
+    
+        @include respond(tab-land) {
+            height: 45vh;
+        }
+    
+        //IF THERE IS HEADING TEXT
+        // &__text-box {
+        //     position: absolute;
+        //     z-index: 4;
+        //     top: 55%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     text-align: center;
+        // }
+    }
+
