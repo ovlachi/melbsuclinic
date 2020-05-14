@@ -1,4 +1,11 @@
+//////////////****////////////
+//THIS SECTION NEEDS TO BE REFACTORED
+//////
+
+
 /*PAGE HERO section*/
+
+
 .hero__page {
     height: 70vh;
     width: 100%;
@@ -78,6 +85,30 @@
         height: 70vh;
         width: 100%;
         background-image: url(../img/privacy-and-confidentiality-CTA-large.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
+    
+        @include respond(tab-land) {
+            height: 45vh;
+        }
+    
+        //IF THERE IS HEADING TEXT
+        // &__text-box {
+        //     position: absolute;
+        //     z-index: 4;
+        //     top: 55%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     text-align: center;
+        // }
+    }
+
+       /* HERO TREATMENT PROGRAM section*/
+       .hero__treatment {
+        height: 70vh;
+        width: 100%;
+        background-image: url(../img/treatment-programs-CTA-large.jpg);
         background-size: cover;
         background-position: top;
         position: relative;

@@ -260,6 +260,18 @@ img {
     .hero__privacy {
       height: 45vh; } }
 
+/* HERO TREATMENT PROGRAM section*/
+.hero__treatment {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../img/treatment-programs-CTA-large.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media (max-width: 75em) {
+    .hero__treatment {
+      height: 45vh; } }
+
 .intro {
   padding: 3rem 0;
   max-width: 70%; }
