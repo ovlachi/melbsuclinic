@@ -47,6 +47,10 @@
     color: $color-white;
     cursor: pointer;
 
+    &--left {
+        margin-left: 0px;
+    }
+
     &:hover {
         color: $color-light-1;
         transition: all .2s;
