@@ -81,6 +81,9 @@ img {
 .u-margin__bottom--large {
   margin-bottom: 3.5rem; }
 
+.u-center {
+  text-align: center; }
+
 .btn__primary, .btn__primary:link, .btn__primary:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -280,6 +283,18 @@ img {
     .hero__treatment {
       height: 45vh; } }
 
+/* HERO ONLINE CONSULTATION section*/
+.hero__online {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../img/online-treatment-2000x1125.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media (max-width: 75em) {
+    .hero__online {
+      height: 45vh; } }
+
 .intro {
   padding: 3rem 0;
   max-width: 70%; }
@@ -428,7 +443,7 @@ blockquote cite:before {
     text-decoration: none;
     border-bottom: 1px solid; }
   .text__hyperlink:visited {
-    color: #bab491; }
+    color: #ff7730; }
   .text__hyperlink:hover {
     color: #ff7730;
     border-bottom: none; }
@@ -444,10 +459,28 @@ blockquote cite:before {
     .program__content {
       padding: 2rem 0 !important; } }
 
+@media (max-width: 75em) {
+  .program__content--yellow {
+    padding: 2.4rem !important;
+    margin-top: 2rem; } }
+
+@media (max-width: 56.25em) {
+  .program__content--yellow {
+    padding: 2.8rem !important;
+    margin-top: 2rem; } }
+
+@media (max-width: 37.5em) {
+  .program__content--yellow {
+    padding: 2.4rem !important;
+    margin-top: 2rem; } }
+
 .program__details {
   box-sizing: border-box;
   width: 100%;
   text-align: left; }
+  .program__details--yellow {
+    background-color: #fef9e5;
+    margin-bottom: 3.5rem; }
 
 .program__image {
   width: 100%; }
@@ -477,7 +510,9 @@ blockquote cite:before {
       padding: 0;
       box-sizing: border-box;
       flex-basis: 48%;
-      box-shadow: 0 1.5rem 4rem rgba(49, 33, 33, 0.15); } }
+      box-shadow: 0 1.5rem 4rem rgba(49, 33, 33, 0.15); }
+      .program__details--yellow {
+        padding: 3.5rem; } }
 
 .header {
   position: fixed;

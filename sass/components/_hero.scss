@@ -127,4 +127,29 @@
         //     text-align: center;
         // }
     }
+    
+      /* HERO ONLINE CONSULTATION section*/
+      .hero__online {
+        height: 70vh;
+        width: 100%;
+        background-image: url(../img/online-treatment-2000x1125.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;
+    
+        @include respond(tab-land) {
+            height: 45vh;
+        }
+    
+        //IF THERE IS HEADING TEXT
+        // &__text-box {
+        //     position: absolute;
+        //     z-index: 4;
+        //     top: 55%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%);
+        //     text-align: center;
+        // }
+    }
+
 
