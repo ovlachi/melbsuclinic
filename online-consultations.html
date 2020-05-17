@@ -143,7 +143,7 @@
       </p>
   </section>
     
-    <section class="wrapper program program__yellow--background">
+    <section class="wrapper__online program program__yellow--background">
         <div class="program__details program__details--yellow">
             <div class="program__content--yellow">
                 <h3 class="program__title u-margin__bottom--small">DOWNLOADING ZOOM 
@@ -206,32 +206,33 @@
             </p>
 
             <div class="contact__form">
-                <form class="form" name="contact" method="POST" data-netlify="true">
-                    <div class="form__group">
-                        <input type="text" class="form__input" id="name" placeholder="Full Name*" required>
-                        <label for="name" class="form__label">Full Name*</label>
-                    </div>
+              <form class="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                  <div class="form__group">
+                      <input type="text" class="form__input" id="name" placeholder="Full Name*" required>
+                      <label for="name" class="form__label">Full Name*</label>
+                  </div>
 
-                    <div class="form__group">
-                        <input type="email" class="form__input" id="email" placeholder="Email address*" required>
-                        <label for="email" class="form__label">Email address*</label>
-                    </div>
+                  <div class="form__group">
+                      <input type="email" class="form__input" id="email" placeholder="Email address*" required>
+                      <label for="email" class="form__label">Email address*</label>
+                  </div>
 
-                    <div class="form__group">
-                        <input type="tel" class="form__input" id="phone" placeholder="Phone number (format: 0412345678)*" name="phone" maxlength="10" pattern="[0-9]{10}" required>
-                        <label for="phone" class="form__label">Phone number (format: 0412345678)*</label>
-                    </div>
+                  <div class="form__group">
+                      <input type="tel" class="form__input" id="phone" placeholder="Phone number (format: 0412345678)*" name="phone" maxlength="10" pattern="[0-9]{10}" required>
+                      <label for="phone" class="form__label">Phone number (format: 0412345678)*</label>
+                  </div>
 
-                    <div class="form__group">
-                        <textarea name="message" class="form__input form__input--message" id="message" placeholder="Message"></textarea>
-                        <label for="message" class="form__label">Message </label>
-                    </div>
+                  <div class="form__group">
+                      <textarea name="message" class="form__input form__input--message" id="message" placeholder="Message"></textarea>
+                      <label for="message" class="form__label">Message </label>
+                  </div>
+                  <div data-netlify-recaptcha="true"></div>
 
-                    <div class="form__group">
-                        <button type="submit" class="btn__primary btn__primary--medium u-margin__bottom--medium">SUBMIT&rarr;</button>
-                    </div>
-                </form>
-            </div>
+                  <div class="form__group">
+                      <button type="submit" class="btn__primary btn__primary--medium u-margin__bottom--medium">SUBMIT&rarr;</button>
+                  </div>
+              </form>
+          </div>
         </div>
     </section>
 
@@ -254,7 +255,7 @@
             </div>
 
             <div class="footer__item">
-                <img src="img/MSUC-logo-version-WHITE.png" alt="MSUC logo hite" class="footer__logo">
+                <a href="index.html"><img src="img/MSUC-logo-version-WHITE.png" alt="MSUC logo hite" class="footer__logo"></a>
             </div>
 
             <div class="footer__item">

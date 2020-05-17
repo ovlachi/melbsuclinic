@@ -168,7 +168,7 @@
             </p>
 
             <div class="contact__form">
-                <form class="form" name="contact" method="POST" data-netlify="true">
+                <form class="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
                     <div class="form__group">
                         <input type="text" class="form__input" id="name" placeholder="Full Name*" required>
                         <label for="name" class="form__label">Full Name*</label>
@@ -188,6 +188,7 @@
                         <textarea name="message" class="form__input form__input--message" id="message" placeholder="Message"></textarea>
                         <label for="message" class="form__label">Message </label>
                     </div>
+                    <div data-netlify-recaptcha="true"></div>
 
                     <div class="form__group">
                         <button type="submit" class="btn__primary btn__primary--medium u-margin__bottom--medium">SUBMIT&rarr;</button>
@@ -216,7 +217,7 @@
             </div>
 
             <div class="footer__item">
-                <img src="img/MSUC-logo-version-WHITE.png" alt="MSUC logo hite" class="footer__logo">
+                <a href="index.html"><img src="img/MSUC-logo-version-WHITE.png" alt="MSUC logo hite" class="footer__logo"></a>
             </div>
 
             <div class="footer__item">

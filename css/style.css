@@ -61,6 +61,14 @@ img {
   margin-left: auto;
   margin-right: auto; }
 
+.wrapper__online {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 75em) {
+    .wrapper__online {
+      max-width: 100%; } }
+
 /***TOP MARGINS***/
 .u-margin__top--small {
   margin-top: 1rem; }
@@ -461,17 +469,17 @@ blockquote cite:before {
 
 @media (max-width: 75em) {
   .program__content--yellow {
-    padding: 2.4rem !important;
+    padding: 4rem !important;
     margin-top: 2rem; } }
 
 @media (max-width: 56.25em) {
   .program__content--yellow {
-    padding: 2.8rem !important;
+    padding: 3.5rem !important;
     margin-top: 2rem; } }
 
 @media (max-width: 37.5em) {
   .program__content--yellow {
-    padding: 2.4rem !important;
+    padding: 2.5rem !important;
     margin-top: 2rem; } }
 
 .program__details {
@@ -500,7 +508,7 @@ blockquote cite:before {
   font-weight: 300;
   margin-top: 1rem; }
 
-@media (min-width: 1250px) {
+@media (min-width: 1200px) {
   .program {
     padding: 3rem;
     box-sizing: border-box;
