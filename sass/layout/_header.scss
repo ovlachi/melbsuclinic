@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     z-index: 100;
-    background: $color-light-2;
+    background: $color-white;
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.15);
     overflow: hidden;
@@ -44,7 +44,7 @@
 /* SVG logo style*/
 #header__logo {
     float: left;
-    height: 120px;
+    height: 125px;
     width: auto;
     display: block;
     padding: 25px 40px;
