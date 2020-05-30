@@ -527,7 +527,7 @@ blockquote cite:before {
   position: fixed;
   width: 100%;
   z-index: 100;
-  background: #fff;
+  background: #bab491;
   backface-visibility: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   overflow: hidden;
