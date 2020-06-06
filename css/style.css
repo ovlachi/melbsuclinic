@@ -523,6 +523,18 @@ blockquote cite:before {
       .program__details--yellow {
         padding: 3.5rem; } }
 
+.services {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center; }
+  .services__box {
+    padding: 3rem;
+    box-sizing: border-box;
+    flex-basis: 48%;
+    text-align: left; }
+  .services__image {
+    width: 100%; }
+
 .header {
   position: fixed;
   width: 100%;
