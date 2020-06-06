@@ -69,6 +69,11 @@ img {
     .wrapper__online {
       max-width: 100%; } }
 
+h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #ffba96; }
+
 /***TOP MARGINS***/
 .u-margin__top--small {
   margin-top: 1rem; }
@@ -303,6 +308,18 @@ img {
     .hero__online {
       height: 45vh; } }
 
+/* HERO SERVICES page*/
+.hero__services {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../img/services-CTA-large-2000x1125.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media (max-width: 75em) {
+    .hero__services {
+      height: 45vh; } }
+
 .intro {
   padding: 3rem 0;
   max-width: 70%; }
@@ -523,17 +540,22 @@ blockquote cite:before {
       .program__details--yellow {
         padding: 3.5rem; } }
 
-.services {
-  padding: 3rem 0;
-  display: flex;
-  justify-content: center; }
-  .services__box {
-    padding: 3rem;
+@media (max-width: 56.25em) {
+  .services {
+    padding: 3rem 0;
+    box-sizing: border-box; } }
+
+@media (min-width: 900px) {
+  .services {
+    padding: 3rem 0;
     box-sizing: border-box;
-    flex-basis: 48%;
-    text-align: left; }
-  .services__image {
-    width: 100%; }
+    display: flex;
+    justify-content: space-between; }
+    .services__box {
+      flex-basis: 45%;
+      text-align: left; }
+    .services__image {
+      width: 100%; } }
 
 .header {
   position: fixed;
