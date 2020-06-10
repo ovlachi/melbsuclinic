@@ -71,8 +71,9 @@ img {
 
 h4 {
   text-transform: uppercase;
-  font-size: 1rem;
-  color: #ffba96; }
+  font-size: 2rem;
+  font-weight: 300;
+  color: #ff9963; }
 
 /***TOP MARGINS***/
 .u-margin__top--small {
@@ -318,6 +319,18 @@ h4 {
   position: relative; }
   @media (max-width: 75em) {
     .hero__services {
+      height: 45vh; } }
+
+/* HERO Psychological SERVICES page*/
+.hero__psycho--services {
+  height: 70vh;
+  width: 100%;
+  background-image: url(../img/Psychological-services-2000x1115.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+  @media (max-width: 75em) {
+    .hero__psycho--services {
       height: 45vh; } }
 
 .intro {
