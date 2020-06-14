@@ -1,0 +1,6 @@
+h4 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+  color: lighten($color:$color-form-invalid, $amount:10);
+}
