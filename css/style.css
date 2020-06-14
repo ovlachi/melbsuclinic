@@ -489,6 +489,23 @@ blockquote cite:before {
   .text__hyperlink:active {
     color: #e1dfd0; }
 
+.text__hyperlink--highlight {
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* active link */ }
+  .text__hyperlink--highlight:link {
+    color: #6e6745;
+    text-decoration: none;
+    border-bottom: 1px solid; }
+  .text__hyperlink--highlight:visited {
+    color: #ff7730; }
+  .text__hyperlink--highlight:hover {
+    color: #ff7730;
+    border-bottom: none; }
+  .text__hyperlink--highlight:active {
+    color: #fff; }
+
 @media (max-width: 37.5em) {
   .program {
     margin-top: 0;
