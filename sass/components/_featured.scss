@@ -1,3 +1,11 @@
+@include respond(tab-land) {
+    #featured__one {
+        display: none;
+    }
+}
+
+
+
 .featured {
 
     @include respond(phone) {
@@ -42,7 +50,7 @@
     }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1200px) {
     .featured {
         display: flex;
         align-items: center;
@@ -54,5 +62,8 @@
             flex-basis: 48%;
             text-align: center;
         }
+    }
+    #featured__two {
+        display: none;
     }
 }

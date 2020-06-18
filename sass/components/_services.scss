@@ -1,22 +1,47 @@
-@include respond(tab-port) {
+
+
+@include respond(tab-land) {
   .services {
-    padding: 3rem 0;
+    //padding: 3rem;
     box-sizing: border-box;
+
+    &__box {
+      padding: 3rem;
+      box-shadow: 0 1.5rem 4rem rgba(49, 33, 33, 0.15);
+      margin-bottom: 5rem;
+    }
   }
 }
 
-@media (min-width: 900px) {
+@include respond(phone) {
+  .services {
+    padding: 0rem;
+    box-sizing: border-box;
+
+    &__box {
+      padding: 0rem;
+      box-shadow: none;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+
+
+@media (min-width: 1200px) {
 
   .services {
-    padding: 3rem 0;
+    padding: 3rem;
     box-sizing: border-box;
     display: flex;
     //align-items: stretch;
     justify-content: space-between;
 
     &__box {
+      padding: 3rem;
       flex-basis: 45%;
       text-align: left;
+      box-shadow: 0 1.5rem 4rem rgba(49, 33, 33, 0.15);
     }
 
     &__image {
