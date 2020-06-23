@@ -8,6 +8,7 @@
 1800px +: Big screens
 
 $breakpoint argument choices:
+- iPhone5
 - phone
 - tab-port
 - tab-land
@@ -15,6 +16,10 @@ $breakpoint argument choices:
  
 */
 @mixin respond ($breakpoint) {
+
+    @if $breakpoint == iPhone5 {
+        @media (max-width: 20em) { @content};  //320px
+    }
 
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content};  //600px
