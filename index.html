@@ -19,7 +19,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="https://www.melbsuclinic.com.au/">
+        <a href="https://www.melbsuclinic.com.au/" aria-label="MSUPC homepage">
             <img src="/img/MSUPC-logo.svg" alt="Melbourne Substance Use and Psychology Clinic logo" id="header__logo" aria-hidden="true">
         </a>
                 <input class="menu__btn" type="checkbox" id="menu__btn">
@@ -122,23 +122,23 @@
 
             <div class="contact__form">
                 <form class="form" name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-                    <div class="form__group">
-                        <input type="text" class="form__input" id="name" placeholder="Full Name*" required>
+                    <div class="form__group" id="fullname">
+                        <input type="text" class="form__input" id="name" aria-labelledby="fullname" placeholder="Full Name*" required>
                         <label for="name" class="form__label">Full Name*</label>
                     </div>
 
-                    <div class="form__group">
-                        <input type="email" class="form__input" id="email" placeholder="Email address*" required>
+                    <div class="form__group" id="email address">
+                        <input type="email" class="form__input" id="email" aria-labelledby="email address" placeholder="Email address*" required>
                         <label for="email" class="form__label">Email address*</label>
                     </div>
 
-                    <div class="form__group">
-                        <input type="tel" class="form__input" id="phone" placeholder="Phone number (format: 0412345678)*" name="phone" maxlength="10" pattern="[0-9]{10}" required>
+                    <div class="form__group" id="phone number">
+                        <input type="tel" class="form__input" id="phone" aria-labelledby="phone number" placeholder="Phone number (format: 0412345678)*" name="phone" maxlength="10" pattern="[0-9]{10}" required>
                         <label for="phone" class="form__label">Phone number (format: 0412345678)*</label>
                     </div>
 
-                    <div class="form__group">
-                        <textarea name="message" class="form__input form__input--message" id="message" placeholder="Message"></textarea>
+                    <div class="form__group" id="write message">
+                        <textarea name="message" class="form__input form__input--message" id="message" aria-labelledby="write message" placeholder="Message"></textarea>
                         <label for="message" class="form__label">Message </label>
                     </div>
                     <div data-netlify-recaptcha="true"></div>
@@ -166,12 +166,12 @@
                         </a>
                     </li>
                 </ul>
-                <p class="footer__copyright">Copyright ©2020&nbsp;|&nbsp;Melbourne Substance Use and Psychology Clinic. Designed by <a href="https://ovlachi.com/" target="_blank">ovlachi</a>
+                <p class="footer__copyright">Copyright ©2020&nbsp;|&nbsp;Melbourne Substance Use and Psychology Clinic. Designed by <a href="https://ovlachi.com/" target="_blank" aria-label="Ovlachi design homepage">ovlachi</a>
                      </p>
             </div>
 
             <div class="footer__item">
-                <a href="https://www.melbsuclinic.com.au/"><img src="img/MSUPC-logo-version-WHITE-02.svg" alt="MSUC logo hite" class="footer__logo"></a>
+                <a href="https://www.melbsuclinic.com.au/" aria-label="MSUPC homepage"><img src="img/MSUPC-logo-version-WHITE-02.svg" alt="MSUC logo hite" class="footer__logo"></a>
             </div>
 
             <div class="footer__item">
@@ -187,11 +187,11 @@
                     </li>
                 </ul>
                 <svg class="footer__icon">
-                <a href="https://www.facebook.com/Melbourne-Substance-Use-Clinic-MSUC-114898983396330/" target="_blank">
+                <a href="https://www.facebook.com/Melbourne-Substance-Use-Clinic-MSUC-114898983396330/" target="_blank" aria-label="MSUPC Facebook page">
                     <use xlink:href="img/sprite.svg#icon-facebook2"></use>
                 </a></svg>
                 <svg class="footer__icon">
-                <a href="https://www.instagram.com/melbourne_substance_use_clinic/" target="_blank"><use xlink:href="img/sprite.svg#icon-instagram"></use>
+                <a href="https://www.instagram.com/melbourne_substance_use_clinic/" target="_blank" aria-label="MSUPC Instagram page"><use xlink:href="img/sprite.svg#icon-instagram"></use>
                 </a></svg>
             </div>
         </div>
