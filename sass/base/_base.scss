@@ -43,3 +43,8 @@ img {
         }  
       }
 } 
+
+::selection {
+    background-color: $color-medium;
+    color: white;
+}

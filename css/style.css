@@ -11,6 +11,14 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - big-desktop
+
+
+ORDER of applying the media queries
+- base + typography
+- general layout + grid
+- page layout
+- components
+
  
 */
 /*COLORS SASS VARIABLES*/
@@ -66,9 +74,13 @@ img {
   max-width: 85%;
   margin-left: auto;
   margin-right: auto; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .wrapper__online {
       max-width: 100%; } }
+
+::selection {
+  background-color: #6e6745;
+  color: white; }
 
 h4 {
   text-transform: uppercase;
@@ -164,11 +176,11 @@ h4 {
     color: #ff7730;
     transform: all 2s; }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   #featured__one {
     display: none; } }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .featured {
     margin-top: 0;
     margin-bottom: 2.5rem; } }
@@ -180,7 +192,7 @@ h4 {
 
 .featured__image {
   align-content: center; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .featured__image {
       display: none; } }
 
@@ -193,7 +205,7 @@ h4 {
 .featured__title {
   text-transform: uppercase;
   font-size: 1.4rem; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .featured__title {
       font-size: 1.2rem;
       margin-top: 3rem; } }
@@ -233,17 +245,17 @@ h4 {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .contact__details {
         font-size: 1.5rem; } }
   .contact__form {
     text-align: center;
     width: 50vw;
     margin: 0 auto; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .contact__form {
         width: 80vw; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .contact__form {
         width: 90vw; } }
 
@@ -255,7 +267,7 @@ h4 {
   background-size: cover;
   background-position: top;
   position: relative; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .hero__page {
       height: 45vh; } }
 
@@ -267,7 +279,7 @@ h4 {
   background-size: cover;
   background-position: top;
   position: relative; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .hero__hypnosis {
       height: 45vh; } }
 
@@ -279,7 +291,7 @@ h4 {
   background-size: cover;
   background-position: top;
   position: relative; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .hero__referral {
       height: 45vh; } }
 
@@ -291,7 +303,7 @@ h4 {
   background-size: cover;
   background-position: top;
   position: relative; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .hero__privacy {
       height: 45vh; } }
 
@@ -303,7 +315,7 @@ h4 {
   background-size: cover;
   background-position: top;
   position: relative; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .hero__treatment {
       height: 45vh; } }
 
@@ -315,7 +327,7 @@ h4 {
   background-size: cover;
   background-position: top;
   position: relative; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .hero__online {
       height: 45vh; } }
 
@@ -327,7 +339,7 @@ h4 {
   background-size: cover;
   background-position: top;
   position: relative; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .hero__services {
       height: 45vh; } }
 
@@ -339,14 +351,14 @@ h4 {
   background-size: cover;
   background-position: top;
   position: relative; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .hero__psycho--services {
       height: 45vh; } }
 
 .intro {
   padding: 3rem 0;
   max-width: 70%; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .intro {
       padding: 0;
       max-width: 90%; } }
@@ -354,7 +366,7 @@ h4 {
     font-size: 2rem;
     line-height: 2.8rem;
     font-weight: 300; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .intro__text {
         font-size: 1.2rem;
         line-height: 2.4rem; } }
@@ -362,21 +374,21 @@ h4 {
 .highlight {
   background-color: #e1dfd0;
   padding: 3rem 0; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .highlight {
       padding: 1rem 0;
       max-width: 100%; } }
   .highlight__box {
     max-width: 70%;
     padding-top: 2rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .highlight__box {
         max-width: 80%; } }
   .highlight__list {
     font-size: 1.4rem;
     font-weight: 300;
     line-height: 2.8rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .highlight__list {
         font-size: 1.2rem;
         font-weight: 400;
@@ -423,25 +435,25 @@ h4 {
 .quote {
   background-color: #e1dfd0;
   padding: 3rem 0; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .quote {
       padding: 1rem 0;
       max-width: 100%; } }
   .quote__box {
     max-width: 60%;
     padding-top: 2rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .quote__box {
         max-width: 80%; } }
   .quote__text {
     font-style: oblique;
     font-size: 1.8rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .quote__text {
         font-size: 1rem; } }
   .quote__cite {
     font-size: 1rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .quote__cite {
         font-size: .7rem; } }
 
@@ -516,7 +528,7 @@ blockquote cite:before {
   .text__hyperlink--highlight:active {
     color: #fff; }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .program {
     margin-top: 0;
     margin-bottom: 2.5rem; }
@@ -525,17 +537,17 @@ blockquote cite:before {
     .program__content {
       padding: 2rem 0 !important; } }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .program__content--yellow {
     padding: 4rem !important;
     margin-top: 2rem; } }
 
-@media (max-width: 56.25em) {
+@media only screen and (max-width: 56.25em) {
   .program__content--yellow {
     padding: 3.5rem !important;
     margin-top: 2rem; } }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .program__content--yellow {
     padding: 2.5rem !important;
     margin-top: 2rem; } }
@@ -580,7 +592,7 @@ blockquote cite:before {
       .program__details--yellow {
         padding: 3.5rem; } }
 
-@media (max-width: 75em) {
+@media only screen and (max-width: 75em) {
   .services {
     box-sizing: border-box; }
     .services__box {
@@ -588,7 +600,7 @@ blockquote cite:before {
       box-shadow: 0 1.5rem 4rem rgba(49, 33, 33, 0.15);
       margin-bottom: 5rem; } }
 
-@media (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
   .services {
     padding: 0rem;
     box-sizing: border-box; }
@@ -650,7 +662,7 @@ blockquote cite:before {
   width: auto;
   display: block;
   padding: 25px 40px; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     #header__logo {
       height: 100px;
       width: auto;
@@ -709,7 +721,7 @@ blockquote cite:before {
     top: -5px; }
 
 /*DESKTOP VERSION OF THE MENU*/
-@media (min-width: 75em) {
+@media only screen and (min-width: 75em) {
   /*1200:16 =86.93em*/
   .header li {
     float: left; }
@@ -745,7 +757,7 @@ footer {
   color: #fff;
   display: flex;
   justify-content: space-evenly; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .footer {
       padding: 3rem 1rem 0 1rem; } }
   .footer__item {
@@ -754,7 +766,7 @@ footer {
     width: 100px;
     height: auto;
     margin-right: 5rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .footer__logo {
         display: none; } }
   .footer__list {
@@ -764,14 +776,14 @@ footer {
     font-weight: 300;
     line-height: 1.8rem;
     text-transform: uppercase; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .footer__list {
         line-height: .9rem; } }
   .footer ul a {
     color: #e1dfd0;
     text-decoration: none;
     font-size: .8rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .footer ul a {
         font-size: .6rem;
         line-height: 2.2rem;
@@ -809,7 +821,7 @@ footer {
     text-align: left;
     margin: 70px auto;
     color: #e1dfd0; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .footer__copyright {
         font-size: .5rem;
         width: 40vw;
@@ -837,10 +849,10 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .hero {
       height: 100vh; } }
-  @media (max-width: 20em) {
+  @media only screen and (max-width: 20em) {
     .hero {
       height: 100vh;
       background-image: none; } }
@@ -857,11 +869,11 @@ footer {
   animation-timing-function: ease-out;
   /* animation-iteration-count: 2; */
   /* animation-delay: 2s; */ }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .hero__heading-primary {
       font-size: 1.8rem;
       margin-top: 1.5rem; } }
-  @media (max-width: 20em) {
+  @media only screen and (max-width: 20em) {
     .hero__heading-primary {
       font-size: 1.2rem;
       margin-top: 2.4rem; } }
@@ -878,11 +890,11 @@ footer {
   animation-timing-function: ease-out;
   /* animation-iteration-count: 2; */
   /* animation-delay: 2s; */ }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .hero__heading-secondary {
       font-size: 1rem;
       margin-top: 1.2rem; } }
-  @media (max-width: 20em) {
+  @media only screen and (max-width: 20em) {
     .hero__heading-secondary {
       font-size: .7rem;
       margin-top: 1rem; } }
@@ -894,7 +906,7 @@ footer {
     font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: 1.5rem; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .home__intro__heading {
         font-size: 1.4rem; } }
   .home__intro__text {

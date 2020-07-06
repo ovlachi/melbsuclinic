@@ -131,7 +131,7 @@
 }
 
 /*DESKTOP VERSION OF THE MENU*/ 
-@media (min-width:75em) { /*1200:16 =86.93em*/
+@media only screen and (min-width:75em) { /*1200:16 =86.93em*/
     .header li {
         float: left;
     }
